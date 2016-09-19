@@ -1,0 +1,36 @@
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+
+
+// project configuration
+project.sourceCompatibility = '1.8'
+project.archivesBaseName = 'tomcat-plugin'
+project.group = 'com.hectorlopezfernandez.gradle'
+project.version = '0.0.0'
+
+
+repositories {
+  mavenCentral()
+  jcenter()
+}
+
+dependencies {
+  compile localGroovy()
+  compile gradleApi()
+  
+  testCompile gradleTestKit()
+  testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+}
+
+
+
+
+
+
+
+
+// Gradle wrapper task
+// Only used when in need to reinstall the wrapper
+task wrapper(type: Wrapper) {
+  gradleVersion = '3.1'
+}
