@@ -4,6 +4,8 @@ public class TomcatRunnerPluginExtension {
 
 	private String tomcatVersion;
 	private String explodedWarDir;
+	private String httpPort = "8080";
+	private String httpsPort = "8443";
 
 	public String getTomcatVersion() {
 		return tomcatVersion;
